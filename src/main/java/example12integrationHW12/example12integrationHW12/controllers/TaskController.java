@@ -30,7 +30,7 @@ public class TaskController {
     @PostMapping
     public ResponseEntity<Task> addTask(@RequestBody Task task) {
         task.setCreatedDate(LocalDateTime.now());
-        fileGateway.writeToFile(task.getTask_name() + ".txt", task.toString());
+        fileGateway.writeToFile("task_log.txt", task.toString());// fileGateway.writeToFile(task.getTask_name() + ".txt", task.toString());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

@@ -42,7 +42,7 @@ public class IntegrationConfig {
         FileWritingMessageHandler handler =
                 new FileWritingMessageHandler(new File(
                         "C:/Users/maksb/SPRING/example12integrationHW12"));
-        handler.setExpectReply(false);
+        new FileWritingMessageHandler(new File("./"));//handler.setExpectReply(false);
         handler.setFileExistsMode(FileExistsMode.APPEND);
         handler.setAppendNewLine(true);
 
