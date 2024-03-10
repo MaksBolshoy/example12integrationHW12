@@ -1,0 +1,20 @@
+package example12integrationHW12.example12integrationHW12.model;
+
+public enum TaskStatus {
+    NOT_STARTED{
+        @Override
+        public String toString() {
+            return "Не выполняется";
+        }
+    }, IN_PROGRESS{
+        @Override
+        public String toString() {
+            return "Выполняется";
+        }
+    }, COMPLETED{
+        @Override
+        public String toString() {
+            return "Завершена";
+        }
+    };
+}
